@@ -1,20 +1,10 @@
-@model MProjeto.Models.Usuario
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Usuario
+@{
+    ViewBag.Subtitulo = "Excluir";
+}
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/lib/bootstrap5/dist/css/bootstrap.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excluir Usuario</title>
-</head>
-<body>
-    
-    <div class="container">
         <h1 class="text-primary">
-            Cadastro de usuario
+            Exclusão de usuario
         </h1>
         <hr>
         <h4>Deseja Realmente exluir o canditado ? <span class="text-danger">@Model.Nome</span></h4>
@@ -26,7 +16,3 @@
             </div>
 
         </form>
-    </div>
-
-</body>
-</html>

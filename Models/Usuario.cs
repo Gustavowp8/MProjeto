@@ -55,12 +55,13 @@ namespace MProjeto.Models
             }
         }
 
-        public static void Excluir(int iDUsuario)
+        public static bool Excluir(int iDUsuario)
         {
             var usuarioExistente = Usuario.listagem.Find(u => u.IdUsuario == iDUsuario);
             if(usuarioExistente != null){
-                Usuario.listagem.Remove(usuarioExistente);
+               return Usuario.listagem.Remove(usuarioExistente);
             }
+            return false;
         }
     }
 

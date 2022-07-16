@@ -37,3 +37,6 @@ C:\dev\MProjeto\bin\Debug\net5.0\libman.json
 C:\dev\MProjeto\obj\Debug\net5.0\Razor\Views\Home\Cadastrar.cshtml.g.cs
 C:\dev\MProjeto\obj\Debug\net5.0\Razor\Views\Home\Usuarios.cshtml.g.cs
 C:\dev\MProjeto\obj\Debug\net5.0\Razor\Views\Home\Excluir.cshtml.g.cs
+C:\dev\MProjeto\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\dev\MProjeto\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\dev\MProjeto\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs

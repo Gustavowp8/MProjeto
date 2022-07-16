@@ -6,6 +6,7 @@ namespace MProjeto.Controllers{
     public class HomeController : Controller
     {
         public IActionResult Index(){
+            ViewBag.QtdeUsuaios = Usuario.Listagem.Count();
             return View();
         }
 
@@ -44,8 +45,8 @@ namespace MProjeto.Controllers{
         [HttpPost]
         public IActionResult Excluir(Usuario usuario)
         {
-           Usuario.Excluir(usuario.IdUsuario);
-           return RedirectToAction("Usuarios");
+            TempData["Excluiu"] = ViewBag.Excluiu = Usuario.Excluir(usuario.IdUsuario);
+            return RedirectToAction("Usuarios");
         }
     }
 }

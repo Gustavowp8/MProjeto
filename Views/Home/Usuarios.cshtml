@@ -1,21 +1,29 @@
-@model IQueryable<MProjeto.Models.Usuario>
-    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IQueryable<Usuario>
+@{
+    ViewBag.Subtitulo = "Usuarios";
+}
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/lib/bootstrap5/dist/css/bootstrap.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuarios</title>
-</head>
-<body>
-    
-    <div class="container">
         <h1 class="text-primary">Usuarios</h1>
         <hr>
         <a href="/Home/Cadastrar" class="btn btn-primary">Novo Usuario</a>
+        @if (TempData.ContainsKey("Excluiu"))
+        {
+            var excluiu = (bool)TempData["Excluiu"];
+            if(excluiu)
+            {
+                <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert">
+                Usuario excluido com sucesso
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning mt-3 alert-dismissible fade show" role="alert">
+                Não foi possivel excluir o usuario.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+        }
 
         <table class="table">
 
@@ -40,7 +48,7 @@
                }
             </tbody>
         </table>
-    </div>
 
-</body>
-</html>
+@section Scripts{
+    <script src="/lib/bootstrap5/dist/js/bootstrap.js"></script>
+}
