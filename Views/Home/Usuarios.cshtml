@@ -11,17 +11,11 @@
             var excluiu = (bool)TempData["Excluiu"];
             if(excluiu)
             {
-                <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert">
-                Usuario excluido com sucesso
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                </div>
+                <partial name="_Mensageminfo" model="@("Usuario excluido com sucesso!")"></partial>
             }
-            else
+            else    
             {
-                <div class="alert alert-warning mt-3 alert-dismissible fade show" role="alert">
-                Não foi possivel excluir o usuario.
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                </div>
+                <partial name="_MensagemErro" model="@("Não foi possivel excluir o usuario!")"></partial>
             }
         }
 
@@ -51,4 +45,8 @@
 
 @section Scripts{
     <script src="/lib/bootstrap5/dist/js/bootstrap.js"></script>
+}
+
+@section LogoPagina{
+     <img src="/img/usuarios.png" height="24" class="d-inline-block align-text-bottom">
 }
